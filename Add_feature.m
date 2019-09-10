@@ -1,6 +1,9 @@
 function [ DISred, red ] = Add_feature( DISas, DISred, red, total)
-%UNTITLED16 此处显示有关此函数的摘要
-%   此处显示详细说明
+%DISas: DIS of each attributes
+%DISred: DIS of current reduct
+%red: reduct
+%total: number of total attributes
+%   Add one attribute to maximize DIS
     a = 0;
     maxsize = 0;
     for i=1:total

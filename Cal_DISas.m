@@ -1,15 +1,15 @@
-function [ r ] = Cal_DISas( F, D, lambdas, total_size, fpx)
-%UNTITLED12 此处显示有关此函数的摘要
-%   此处显示详细说明
+function [ r ] = Cal_DISas( F, D, lambdas, total_size)
+%F: attributes of all samples
+%D: all decisions
+%lambdas: all lambdas
+%total_size: sample number
+%   Calculate DIS of each attributes
     if ~exist('total_size', 'var')
         total_size = size(D,1);
     end
-    if ~exist('fpx', 'var')
-        fpx=0;
-    end
     r = cell(size(F,2),1);
     for i=1:size(F,2)
-        r{i} = DIS_a(i,F, D, lambdas, total_size, fpx);
+        r{i} = DIS_a(i,F, D, lambdas, total_size);
     end
 
 end

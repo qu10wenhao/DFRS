@@ -1,6 +1,6 @@
 function [ r ] = Get_Core( DISas )
-%UNTITLED15 此处显示有关此函数的摘要
-%   此处显示详细说明
+%DISas: DIS of each attributes
+%   Calculate Core set based on all DIS
     r = [];
     for i=1:size(DISas,1)
         s = DISas{i};

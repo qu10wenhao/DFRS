@@ -1,11 +1,12 @@
-function [ result ] = DIS_a( a , F, D, lambdas, total_size, fpx)
-%a: selected feature index
-%   此处显示详细说明
+function [ result ] = DIS_a( a , F, D, lambdas, total_size)
+%a: selected attribute index
+%F: attributes of all samples
+%D: all decisions
+%lambdas: all lambdas
+%total_size: number of samples
+%   Calculate DIS of selected attribute.
     if ~exist('total_size', 'var')
         total_size = size(D,1);
-    end
-    if ~exist('fpx', 'var')
-        fpx=0;
     end
     s = size(D,1);
     

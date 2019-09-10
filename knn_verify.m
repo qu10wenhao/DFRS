@@ -1,6 +1,8 @@
 function [ acc ] = knn_verify( F, D, k )
-%UNTITLED25 此处显示有关此函数的摘要
-%   此处显示详细说明
+%F: attributes of all samples
+%D: all decisions
+%k: k of KNN
+%   KNN verification
     datanum = size(F,1);
     p = ceil(datanum/10);
     cor = 0;
