@@ -3,7 +3,7 @@ function [ DISred, red ] = Add_feature( DISas, DISred, red, total)
 %DISred: DIS of current reduct
 %red: reduct
 %total: number of total attributes
-%   Add one attribute to maximize DIS
+%   Add one attribute which could maximize DISred
     a = 0;
     maxsize = 0;
     for i=1:total

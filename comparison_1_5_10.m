@@ -1,6 +1,6 @@
 %Select dataset
 load small-data.mat
-dataset = libras;
+dataset = glass;
 
 %Normalization
 F = dataset(:,1:size(dataset,2)-1);
@@ -25,5 +25,5 @@ acc2 = knn_verify(vF(:,result), vD, 3);
 f2 = [length(result),t, t0, t1, t2, max_sample, avg_sample,acc2];
 
 [result,t, t0, t1, t2, max_sample, avg_sample] = DFRS(F,D,10);
-acc1 = knn_verify(vF(:,result), vD, 3);
+acc3 = knn_verify(vF(:,result), vD, 3);
 f3 = [length(result),t, t0, t1, t2, max_sample, avg_sample,acc3];

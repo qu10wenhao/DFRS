@@ -32,7 +32,7 @@ function [ result ] = DIS_a( a , F, D, lambdas, total_size)
                 continue
             end
             if T_M(R_a(F(i,a),F(j,a)),max(lambdas(i),lambdas(j))) == 0
-                r(index) = (fpx+i)*10^(floor(log10(total_size))+1)+fpx+j;
+                r(index) = i*10^(floor(log10(total_size))+1)+j;
                 index = index + 1;
             end
         end

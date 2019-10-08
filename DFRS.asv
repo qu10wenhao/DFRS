@@ -50,7 +50,6 @@ function [ result,t, t0, t1, t2, max_sample, avg_sample ] = DFRS( F,D,node_num )
         end
         tt = toc;
         fprintf('node %d calculate %d samples: %f s\n',i,length(index),tt);
-        %Take the slowest node as the time of this part
         t2 = max(t2,tt);
         %Merge result to the centralized server
         if isempty(result)
